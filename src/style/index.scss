@@ -1,0 +1,81 @@
+@import './normalize.css';
+
+// 滚动条样式
+// 滚动条的宽度
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+// ::-webkit-scrollbar-track-piece {
+//   background-color: var(--next-bg-main-color);
+// }
+// 滚动条的设置
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.3);
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 5px;
+  transition: 0.3s background-color;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.5);
+}
+
+// 弹性布局
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+// 边框
+.border {
+  border: 1px solid red;
+}
+
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+  .font#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 35 {
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}
+
+.el-icon {
+  vertical-align: middle;
+}

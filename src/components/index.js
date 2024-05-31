@@ -3,8 +3,9 @@ import Hamburger from './Hamburger/index.vue';
 import Breadcrumb from './Breadcrumb/index.vue';
 import Screenfull from './Screenfull/index.vue';
 import SvgIcon from './SvgIcon/index.vue';
+import RightToolbar from './RightToolbar/index.vue';
 
-const globalComponent = { Hamburger, Breadcrumb, Screenfull, SvgIcon };
+const globalComponent = { Hamburger, Breadcrumb, Screenfull, SvgIcon, RightToolbar };
 
 export default {
   install(app) {

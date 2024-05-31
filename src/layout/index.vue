@@ -42,11 +42,13 @@ const { routes } = storeToRefs(routesList);
 
 <style lang="scss" scoped>
 .layout-container {
+  min-width: 800px;
   width: 100vw;
   height: 100vh;
   display: flex;
   overflow: hidden;
   .sidebar {
+    flex-shrink: 0;
     color: #ffffff;
     width: $base-menu-width;
     height: 100%;

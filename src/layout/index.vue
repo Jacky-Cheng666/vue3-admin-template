@@ -16,7 +16,7 @@
         </el-menu>
       </el-scrollbar>
     </div>
-    <div class="main-container">
+    <div class="main-container" :class="{ fold }">
       <Tabbar />
       <Main />
     </div>
@@ -68,7 +68,11 @@ const { routes } = storeToRefs(routesList);
   .main-container {
     position: relative;
     box-sizing: border-box;
-    flex: 1;
+    transition: all 0.3s;
+    width: calc(100vw - $base-menu-width);
+    &.fold {
+      width: calc(100vw - $base-menu-min-width);
+    }
   }
 }
 </style>

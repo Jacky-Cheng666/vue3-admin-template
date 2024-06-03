@@ -4,8 +4,9 @@ import Breadcrumb from './Breadcrumb/index.vue';
 import Screenfull from './Screenfull/index.vue';
 import SvgIcon from './SvgIcon/index.vue';
 import RightToolbar from './RightToolbar/index.vue';
+import Pagination from './Pagination/index.vue';
 
-const globalComponent = { Hamburger, Breadcrumb, Screenfull, SvgIcon, RightToolbar };
+const globalComponent = { Hamburger, Breadcrumb, Screenfull, SvgIcon, RightToolbar, Pagination };
 
 export default {
   install(app) {

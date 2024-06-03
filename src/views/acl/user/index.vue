@@ -71,6 +71,14 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <Pagination
+      v-show="total > 0"
+      :total="total"
+      v-model:page="queryParams.pageNum"
+      v-model:limit="queryParams.pageSize"
+      @pagination="getList"
+    />
   </div>
 </template>
 
@@ -105,7 +113,10 @@ const data = reactive({
 
 const { queryParams } = toRefs(data);
 
-const handleQuery = () => {};
+const handleQuery = () => {
+  queryParams.value.pageNum = 1;
+  getList();
+};
 const resetQuery = () => {};
 const getList = async () => {
   loading.value = true;
